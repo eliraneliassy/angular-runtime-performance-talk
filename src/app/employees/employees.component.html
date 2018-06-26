@@ -1,0 +1,25 @@
+<div class="container text-center">
+
+  <h1 class="h1">
+    R&D Employees
+  </h1>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  </div>
+
+
+  <div>
+    <div *ngFor="let item of data">
+      <h3 matLine title="Name">
+        {{ item.name }}
+      </h3>
+
+      <span title="Score" class="mat-chip mat-primary mat-chip-selected" color="primary" selected="true">
+        {{ calculate(item.fiboCalc) }}
+      </span>
+
+      <i title="Delete" class="fa fa-trash-o" aria-hidden="true" (click)="remove.emit(item)"></i>
+    </div>
+  </div>
+</div>
