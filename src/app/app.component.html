@@ -1,1 +1,6 @@
-<app-employees [data]="employees"></app-employees>
+<div class="container text-center">
+    <div class="col-6">
+        <app-employees [data]="employees" (add)="add($event)" (remove)="remove($event)"></app-employees>
+    </div>
+    
+</div>

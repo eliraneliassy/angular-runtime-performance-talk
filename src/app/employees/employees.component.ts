@@ -13,8 +13,9 @@ export class EmployeesComponent {
 
   @Output() remove = new EventEmitter<Employee>();
   @Output() add = new EventEmitter<string>();
-
   label: string;
+
+
 
   handleKey(event: any) {
     if (event.keyCode === 13) {
@@ -26,5 +27,6 @@ export class EmployeesComponent {
   calculate(num: number) {
     return fibonacci(num);
   }
+
 
 }

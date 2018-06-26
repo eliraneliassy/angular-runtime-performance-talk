@@ -1,4 +1,4 @@
 export interface Employee {
     name: string;
-    fiboCalc: number;
+    number: number;
 }
