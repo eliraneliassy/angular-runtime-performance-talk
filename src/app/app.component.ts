@@ -9,19 +9,21 @@ import { GeneratorService } from './core/services/generator.service';
 })
 export class AppComponent implements OnInit {
 
-  employees: Employee[];
+  salesEmployees: Employee[];
+  rndEmployees: Employee[];
   constructor(private generator: GeneratorService) { }
 
   ngOnInit(): void {
-    this.employees = this.generator.generate(10000);
+    this.salesEmployees = this.generator.generate(1000);
+    this.rndEmployees = this.generator.generate(1000);
   }
 
-  remove(item: Employee) {
-    this.employees.splice(this.employees.indexOf(item), 1);
+  remove(list: Employee[], item: Employee) {
+    list.splice(list.indexOf(item), 1);
   }
 
-  add(name: string) {
-    this.employees.unshift({ name: name, number: this.generator.generateNumber(10, 10) });
+  add(list: Employee[], name: string) {
+    list.unshift({ name: name, number: this.generator.generateNumber(10, 10) });
   }
 
 }

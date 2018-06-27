@@ -1,20 +1,22 @@
+<h1 class="h1 text-center">
+  {{department}}
+</h1>
 
+<div class="input-group mb-3">
+  <input type="text" class="form-control" [(ngModel)]="label" (keydown)="handleKey($event)">
+</div>
 
-  <h1 class="h1">
-    R&D Employees
-  </h1>
-
-  <div class="input-group mb-3">
-    <input type="text" class="form-control" [(ngModel)]="label" (keydown)="handleKey($event)">
-  </div>
-
-  <ul class="list-group" *ngFor="let item of data">
-    <li class="list-group-item"> {{ item.name }}
-      <span title="Score" class="mat-chip mat-primary mat-chip-selected" color="primary" selected="true">
+<ul class="list-group">
+  <li class="list-group-item d-flex" *ngFor="let item of data">
+    <div class="mr-auto p-2">{{ item.name }}</div>
+    <div class="p-2">
+      <span class="badge badge-pill badge-primary">
         {{ calculate(item.number) }}
       </span>
       <button title="Delete" class="btn btn-danger" (click)="remove.emit(item)">Delete</button>
-    </li>
+    </div>
 
-  </ul>
 
+  </li>
+
+</ul>

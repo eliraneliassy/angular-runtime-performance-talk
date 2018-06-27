@@ -14,6 +14,7 @@ export class EmployeesComponent {
   @Output() remove = new EventEmitter<Employee>();
   @Output() add = new EventEmitter<string>();
   label: string;
+  @Input() department: string;
 
 
 
