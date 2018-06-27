@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { AddEmployeeInputComponent } from './add-employee-input/add-employee-input.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { PureFiboPipe } from './core/pipes/pure-fibo.pipe';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { EmployeeListComponent } from './employee-list/employee-list.component';
     EmployeesComponent,
     AddEmployeeInputComponent,
     EmployeeListComponent,
+    PureFiboPipe,
   ],
   imports: [
     BrowserModule,

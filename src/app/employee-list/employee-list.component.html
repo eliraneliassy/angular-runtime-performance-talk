@@ -4,7 +4,7 @@
       <div class="mr-auto p-2">{{ item.name }}</div>
       <div class="p-2">
         <span class="badge badge-pill badge-primary">
-          {{ calculate(item.number) }}
+          {{ item.number | pureFibo }}
         </span>
         <button title="Delete" class="btn btn-danger" (click)="remove.emit(item)">Delete</button>
       </div>
