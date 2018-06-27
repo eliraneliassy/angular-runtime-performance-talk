@@ -2,21 +2,8 @@
   {{department}}
 </h1>
 
-<div class="input-group mb-3">
-  <input type="text" class="form-control" [(ngModel)]="label" (keydown)="handleKey($event)">
-</div>
-
-<ul class="list-group">
-  <li class="list-group-item d-flex" *ngFor="let item of data">
-    <div class="mr-auto p-2">{{ item.name }}</div>
-    <div class="p-2">
-      <span class="badge badge-pill badge-primary">
-        {{ calculate(item.number) }}
-      </span>
-      <button title="Delete" class="btn btn-danger" (click)="remove.emit(item)">Delete</button>
-    </div>
+<app-add-employee-input (add)="add.emit($event)"></app-add-employee-input>
+<app-employee-list (remove)="remove.emit($event)" [data]="data"></app-employee-list>
 
 
-  </li>
 
-</ul>

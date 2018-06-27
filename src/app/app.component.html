@@ -3,8 +3,6 @@
         <app-employees [department]="'R&D'" [data]="rndEmployees" (add)="rndEmployees = add(rndEmployees, $event)" (remove)="rndEmployees = remove(rndEmployees, $event)"></app-employees>
     </div>
 
-
-
     <div class="col-6">
         <app-employees [department]="'Sales'" [data]="salesEmployees" (add)="salesEmployees = add(salesEmployees, $event)" (remove)="salesEmployees = remove(salesEmployees, $event)"></app-employees>
     </div>

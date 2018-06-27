@@ -13,24 +13,11 @@ export class EmployeesComponent {
 
   @Input() data: List<Employee>;
 
-  @Output() remove = new EventEmitter<Employee>();
   @Output() add = new EventEmitter<string>();
-  label: string;
+  @Output() remove = new EventEmitter<Employee>();
+
   @Input() department: string;
 
-
-
-  handleKey(event: any) {
-    if (event.keyCode === 13) {
-      this.add.emit(this.label);
-      this.label = '';
-    }
-  }
-
-  calculate(num: number) {
-    console.log('calc' , this.department, Date.now());
-    return fibonacci(num);
-  }
 
 
 }

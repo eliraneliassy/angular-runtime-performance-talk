@@ -1,0 +1,15 @@
+
+<ul class="list-group">
+    <li class="list-group-item d-flex" *ngFor="let item of data">
+      <div class="mr-auto p-2">{{ item.name }}</div>
+      <div class="p-2">
+        <span class="badge badge-pill badge-primary">
+          {{ calculate(item.number) }}
+        </span>
+        <button title="Delete" class="btn btn-danger" (click)="remove.emit(item)">Delete</button>
+      </div>
+  
+  
+    </li>
+  
+  </ul>
