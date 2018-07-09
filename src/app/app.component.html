@@ -1,12 +1,17 @@
 <div class="container row d-flex justify-content-center">
     <div class="col-6">
-        <app-employees [department]="'R&D'" [data]="rndEmployees" (add)="add(rndEmployees, $event)" (remove)="remove(rndEmployees, $event)"></app-employees>
+        <app-employees [department]="'R&D'"
+         [data]="rndEmployees"
+         (add)="add(rndEmployees, $event)" 
+         (remove)="remove(rndEmployees, $event)"></app-employees>
     </div>
 
-
-
     <div class="col-6">
-        <app-employees [department]="'Sales'" [data]="salesEmployees" (add)="add(salesEmployees, $event)" (remove)="remove(salesEmployees, $event)"></app-employees>
+        <app-employees 
+        [department]="'Sales'" 
+        [data]="salesEmployees" 
+        (add)="add(salesEmployees, $event)" 
+        (remove)="remove(salesEmployees, $event)"></app-employees>
     </div>
 
 
