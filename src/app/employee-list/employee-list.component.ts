@@ -17,7 +17,7 @@ export class EmployeeListComponent {
   constructor() { }
 
   calculate(num: number) {
-    console.log('asd');
+    console.log('calc fibo...');
     return fibonacci(num);
   }
 
